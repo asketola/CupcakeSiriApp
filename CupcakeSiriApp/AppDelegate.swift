@@ -40,6 +40,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        if userActivity.activityType == "com.UpEarlyApps.CupcakeSiriApp.order" {
+            guard let navigationController = window?.rootViewController as? UINavigationController
+                else {
+                    fatalError("Expected navigation controller as root view controller.")
+            }
+            
+            guard let orderViewController = navigationController.storyboard?.instantiateViewController(withIdentifier: "OrderViewController") as? OrderViewController else {
+                fatalError("Unable to load OrderViewController from storyboard")
+            }
+            
+            if let order = Order(from: userActivity.userInfo?["order"] as? Data) {
+                orderViewController.cake = order.cake
+                orderViewController.toppings = order.toppings
+                navigationController.pushViewController(orderViewController, animated: false)
+            }
+        }
+        return true
+    }
 
 
 }
