@@ -18,8 +18,6 @@ class OrderViewController: UIViewController {
     @IBOutlet weak var details: UILabel!
     @IBOutlet weak var cost: UILabel!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -70,7 +68,7 @@ class OrderViewController: UIViewController {
             activity.title = "Order a \(orderName)."
         }
         
-        // allow Siri ro index this and use it for voice-matched queries
+        // allow Siri to index this and use it for voice-matched queries
         activity.isEligibleForSearch = true
         activity.isEligibleForPrediction = true
         
@@ -85,6 +83,7 @@ class OrderViewController: UIViewController {
         activity.suggestedInvocationPhrase = "I need a cupcake!"
         
         self.userActivity = activity
+        let simplenumber = 1
     }
 
 
