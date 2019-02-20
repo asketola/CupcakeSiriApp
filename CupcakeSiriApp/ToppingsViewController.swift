@@ -11,7 +11,6 @@ import UIKit
 class ToppingsViewController: UITableViewController {
 
     var cake: Product!
-    var toppings = [Product]()
     var selectedToppings = Set<Product>()
     
     override func viewDidLoad() {
@@ -20,30 +19,15 @@ class ToppingsViewController: UITableViewController {
         title = "Add Toppings"
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Place Order", style: .plain, target: self, action: #selector(placeOrder))
-        
-        // find cupcakes.json in our bundle
-        guard let url = Bundle.main.url(forResource: "toppings", withExtension: "json") else {
-            fatalError("Can't find toppings.json in app Bundle")
-        }
-        // load it into a Data instance and decode it to a Product array
-        if let data = try? Data(contentsOf: url) {
-            let decoder = JSONDecoder()
-            toppings = (try? decoder.decode([Product].self, from: data)) ?? [Product]()
-            
-            //sort the cupcakes alphabetically
-            toppings.sort {
-                return $0.name < $1.name
-            }
-        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return toppings.count
+        return Menu.shared.toppings.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let topping = toppings[indexPath.row]
+        let topping = Menu.shared.toppings[indexPath.row]
         cell.textLabel?.text = "\(topping.name) - $\(topping.price)"
         cell.detailTextLabel?.text = topping.description
         
@@ -62,7 +46,7 @@ class ToppingsViewController: UITableViewController {
             fatalError("Unable to find the cell that was tapped.")
         }
         // figure out which  topping this is attached to
-        let topping = toppings[indexPath.row]
+        let topping = Menu.shared.toppings[indexPath.row]
         if cell.accessoryType == .checkmark {
             // this was checked, uncheck it
             cell.accessoryType = .none

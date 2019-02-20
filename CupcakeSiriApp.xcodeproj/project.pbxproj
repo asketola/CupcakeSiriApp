@@ -21,6 +21,15 @@
 		796C9A46221BC33500FAF81F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C9A45221BC33500FAF81F /* Product.swift */; };
 		796C9A48221BD26400FAF81F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C9A47221BD26400FAF81F /* Order.swift */; };
 		796C9A4A221E0F1400FAF81F /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 796C9A49221E0F1400FAF81F /* Intents.intentdefinition */; };
+		796C9A52221E144600FAF81F /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C9A51221E144600FAF81F /* IntentHandler.swift */; };
+		796C9A56221E144600FAF81F /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 796C9A4F221E144600FAF81F /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		796C9A5B221E149400FAF81F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C9A45221BC33500FAF81F /* Product.swift */; };
+		796C9A5C221E149D00FAF81F /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 796C9A49221E0F1400FAF81F /* Intents.intentdefinition */; };
+		796C9A5D221E14A700FAF81F /* cupcakes.json in Resources */ = {isa = PBXBuildFile; fileRef = 796C9A41221BC2E600FAF81F /* cupcakes.json */; };
+		796C9A5E221E14A700FAF81F /* toppings.json in Resources */ = {isa = PBXBuildFile; fileRef = 796C9A43221BC2F000FAF81F /* toppings.json */; };
+		796C9A5F221E14AD00FAF81F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C9A47221BD26400FAF81F /* Order.swift */; };
+		796C9A61221E151A00FAF81F /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C9A60221E151A00FAF81F /* Menu.swift */; };
+		796C9A62221E151A00FAF81F /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C9A60221E151A00FAF81F /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +47,28 @@
 			remoteGlobalIDString = 796C9A0B221B9E5900FAF81F;
 			remoteInfo = CupcakeSiriApp;
 		};
+		796C9A54221E144600FAF81F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 796C9A04221B9E5900FAF81F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 796C9A4E221E144600FAF81F;
+			remoteInfo = Extension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		796C9A5A221E144600FAF81F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				796C9A56221E144600FAF81F /* Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		796C9A0C221B9E5900FAF81F /* CupcakeSiriApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeSiriApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +91,10 @@
 		796C9A45221BC33500FAF81F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		796C9A47221BD26400FAF81F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		796C9A49221E0F1400FAF81F /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		796C9A4F221E144600FAF81F /* Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		796C9A51221E144600FAF81F /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		796C9A53221E144600FAF81F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		796C9A60221E151A00FAF81F /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +119,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		796C9A4C221E144600FAF81F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -94,6 +135,7 @@
 				796C9A0E221B9E5900FAF81F /* CupcakeSiriApp */,
 				796C9A23221B9E5B00FAF81F /* CupcakeSiriAppTests */,
 				796C9A2E221B9E5B00FAF81F /* CupcakeSiriAppUITests */,
+				796C9A50221E144600FAF81F /* Extension */,
 				796C9A0D221B9E5900FAF81F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +146,7 @@
 				796C9A0C221B9E5900FAF81F /* CupcakeSiriApp.app */,
 				796C9A20221B9E5B00FAF81F /* CupcakeSiriAppTests.xctest */,
 				796C9A2B221B9E5B00FAF81F /* CupcakeSiriAppUITests.xctest */,
+				796C9A4F221E144600FAF81F /* Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +165,7 @@
 				796C9A16221B9E5B00FAF81F /* Assets.xcassets */,
 				796C9A41221BC2E600FAF81F /* cupcakes.json */,
 				796C9A43221BC2F000FAF81F /* toppings.json */,
+				796C9A60221E151A00FAF81F /* Menu.swift */,
 				796C9A18221B9E5B00FAF81F /* LaunchScreen.storyboard */,
 				796C9A1B221B9E5B00FAF81F /* Info.plist */,
 			);
@@ -146,6 +190,15 @@
 			path = CupcakeSiriAppUITests;
 			sourceTree = "<group>";
 		};
+		796C9A50221E144600FAF81F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				796C9A51221E144600FAF81F /* IntentHandler.swift */,
+				796C9A53221E144600FAF81F /* Info.plist */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,10 +209,12 @@
 				796C9A08221B9E5900FAF81F /* Sources */,
 				796C9A09221B9E5900FAF81F /* Frameworks */,
 				796C9A0A221B9E5900FAF81F /* Resources */,
+				796C9A5A221E144600FAF81F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				796C9A55221E144600FAF81F /* PBXTargetDependency */,
 			);
 			name = CupcakeSiriApp;
 			productName = CupcakeSiriApp;
@@ -202,6 +257,23 @@
 			productReference = 796C9A2B221B9E5B00FAF81F /* CupcakeSiriAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		796C9A4E221E144600FAF81F /* Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 796C9A57221E144600FAF81F /* Build configuration list for PBXNativeTarget "Extension" */;
+			buildPhases = (
+				796C9A4B221E144600FAF81F /* Sources */,
+				796C9A4C221E144600FAF81F /* Frameworks */,
+				796C9A4D221E144600FAF81F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Extension;
+			productName = Extension;
+			productReference = 796C9A4F221E144600FAF81F /* Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -223,6 +295,9 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 796C9A0B221B9E5900FAF81F;
 					};
+					796C9A4E221E144600FAF81F = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 796C9A07221B9E5900FAF81F /* Build configuration list for PBXProject "CupcakeSiriApp" */;
@@ -241,6 +316,7 @@
 				796C9A0B221B9E5900FAF81F /* CupcakeSiriApp */,
 				796C9A1F221B9E5B00FAF81F /* CupcakeSiriAppTests */,
 				796C9A2A221B9E5B00FAF81F /* CupcakeSiriAppUITests */,
+				796C9A4E221E144600FAF81F /* Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +348,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		796C9A4D221E144600FAF81F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				796C9A5D221E14A700FAF81F /* cupcakes.json in Resources */,
+				796C9A5E221E14A700FAF81F /* toppings.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -281,6 +366,7 @@
 			files = (
 				796C9A4A221E0F1400FAF81F /* Intents.intentdefinition in Sources */,
 				796C9A48221BD26400FAF81F /* Order.swift in Sources */,
+				796C9A61221E151A00FAF81F /* Menu.swift in Sources */,
 				796C9A12221B9E5900FAF81F /* ViewController.swift in Sources */,
 				796C9A3E221B9FB200FAF81F /* ToppingsViewController.swift in Sources */,
 				796C9A46221BC33500FAF81F /* Product.swift in Sources */,
@@ -305,6 +391,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		796C9A4B221E144600FAF81F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				796C9A5C221E149D00FAF81F /* Intents.intentdefinition in Sources */,
+				796C9A52221E144600FAF81F /* IntentHandler.swift in Sources */,
+				796C9A5F221E14AD00FAF81F /* Order.swift in Sources */,
+				796C9A5B221E149400FAF81F /* Product.swift in Sources */,
+				796C9A62221E151A00FAF81F /* Menu.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -317,6 +415,11 @@
 			isa = PBXTargetDependency;
 			target = 796C9A0B221B9E5900FAF81F /* CupcakeSiriApp */;
 			targetProxy = 796C9A2C221B9E5B00FAF81F /* PBXContainerItemProxy */;
+		};
+		796C9A55221E144600FAF81F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 796C9A4E221E144600FAF81F /* Extension */;
+			targetProxy = 796C9A54221E144600FAF81F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -459,6 +562,7 @@
 		796C9A35221B9E5B00FAF81F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J63UEA4RCQ;
@@ -477,6 +581,7 @@
 		796C9A36221B9E5B00FAF81F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J63UEA4RCQ;
@@ -570,6 +675,44 @@
 			};
 			name = Release;
 		};
+		796C9A58221E144600FAF81F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J63UEA4RCQ;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = UpEarlyApps.CupcakeSiriApp.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		796C9A59221E144600FAF81F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J63UEA4RCQ;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = UpEarlyApps.CupcakeSiriApp.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -605,6 +748,15 @@
 			buildConfigurations = (
 				796C9A3B221B9E5B00FAF81F /* Debug */,
 				796C9A3C221B9E5B00FAF81F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		796C9A57221E144600FAF81F /* Build configuration list for PBXNativeTarget "Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				796C9A58221E144600FAF81F /* Debug */,
+				796C9A59221E144600FAF81F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
